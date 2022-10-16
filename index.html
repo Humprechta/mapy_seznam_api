@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+  <html>
+  <head>
+      <meta charset="utf-8" />
+      <script type="text/javascript" src="https://api.mapy.cz/loader.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <script type="text/javascript">Loader.load();</script>
+      <script src="js.js"></script>
+  </head>
+
+  <body>
+     <div id="m" style="height:360px"></div>
+     <button onclick="pridej()">Přidej vlastní bod</button>
+     <script>
+       //https://frame.mapy.cz/s/gamejehere
+       function ukaz_mapu(hide){
+            hide.style.display = "none";
+            document.getElementById("mapy").src = "https://frame.mapy.cz/s/gamejehere";
+       }
+     </script>
+     <div id="iFrameMapy">
+        <div id="mapy_souhlas">
+            <button onclick="ukaz_mapu(this)">Souhlasím</button>
+        </div>
+        <iframe id="mapy" style="border:none" src="" width="100%" height="300"></iframe>
+    </div>
+  </body>
+</html>
